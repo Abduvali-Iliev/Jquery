@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="jquery-3.6.3.min.js"></script>
+</head>
+<body>
+<div id="cart-items">
+  <div class="item">Milk 1 l.<span class="qty"> x 2 шт</span></div>
+  <div class="item">Cola 1.5 l. <span class="qty"> x 1 шт </span></div>
+  <div class="item">Bread<span class="qty"> x 2 шт</span></div>
+  <div class="item">Cheese<span class="qty"> x 1 шт</span></div>
+  <div class="item">Chocolate bar<span class="qty"> x 3 шт</span></div>
+</div>
+
+<script type="text/javascript">
+
+  // ЗАдание на JQuery
+  const element = $('.item');
+  element[1].remove();
+
+  const parentElement = $('.item');
+  const newItem = $('<div class="item">Canned fish <span class="qty">x 4</span></div>');
+  $(parentElement[3]).replaceWith(newItem);
+</script>
+</body>
+</html>

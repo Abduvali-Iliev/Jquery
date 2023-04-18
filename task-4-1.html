@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.6.3.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    const ul = document.createElement('ul');
+    ul.className = 'task';
+    let i;
+
+    while (i = prompt("Список задач: ")){
+        const list = document.createElement('li');
+        list.innerHTML = list.innerHTML + i;
+        ul.appendChild(list);
+    }
+    document.body.append(ul);
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+

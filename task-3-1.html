@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="jquery-3.6.3.min.js"></script>
+</head>
+<body>
+<div id="cart-items">
+  <div class="item">Milk 1 l.<span class="qty"> x 2 шт</span></div>
+  <div class="item">Cola 1.5 l. <span class="qty"> x 1 шт </span></div>
+  <div class="item">Bread<span class="qty"> x 2 шт</span></div>
+  <div class="item">Cheese<span class="qty"> x 1 шт</span></div>
+  <div class="item">Chocolate bar<span class="qty"> x 3 шт</span></div>
+</div>
+
+<script type="text/javascript">
+  const element = document.querySelectorAll('.item');
+  element[1].remove();
+
+  const parentElement = document.getElementById('cart-items');
+  const newItem = document.createElement('div');
+  newItem.className = 'item';
+  newItem.innerHTML = 'Canned fish';
+  parentElement.replaceChild(newItem, parentElement.children[3]);
+
+  const span = document.createElement('span');
+  span.className = 'qty';
+  span.innerHTML = ' x 4 шт';
+  newItem.appendChild(span);
+
+</script>
+</body>
+</html>

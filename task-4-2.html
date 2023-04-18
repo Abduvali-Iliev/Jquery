@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.6.3.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+
+    const ul = $('<ul></ul>');
+    $('body').append(ul);
+    let i;
+
+    while (i = prompt("Список задач: ")){
+        const list = $('<li></li>');
+
+        $(ul).append(list.append(i));
+        console.log(ul);
+    }
+
+</script>
+</body>
+</html>
+
+
+
+
+
+

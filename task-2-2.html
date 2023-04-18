@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="jquery-3.6.3.min.js"></script>
+</head>
+<body>
+<ol id="todo-list"></ol>
+
+<script>
+  const tasks = ['Buy lemonade', 'Make toasts', 'Repair car', 'Play games', 'Pet a cat'];
+
+  // JQuery
+  const list = $('#todo-list');
+
+  for (let i = 0; i < tasks.length; i++){
+    let li = $('<li class="task"></li>');
+    $(list).append(li.append(tasks[i]));
+  }
+
+
+</script>
+</body>
+</html>
+
